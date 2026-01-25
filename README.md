@@ -86,8 +86,8 @@ A modern, responsive portfolio website showcasing my 7+ years of experience as a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nishitvankawala/portfolio.git
-   cd portfolio
+   git clone https://github.com/nishitvankawala/nishit-portfolio.git
+   cd nishit-portfolio
    ```
 
 2. **Install dependencies**
