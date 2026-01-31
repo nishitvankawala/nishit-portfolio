@@ -420,9 +420,9 @@ Sent from Nishit's Portfolio Contact Form
           <p className="text-gray-400 mb-6">Or reach out directly:</p>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(107, 114, 128, 0.3)" }}
               onClick={() => window.open('mailto:nishitvankawala@gmail.com', '_blank')}
-              className="px-4 py-2 md:px-6 md:py-3 bg-gray-700/80 hover:bg-gray-600/80 text-gray-200 hover:text-white border border-gray-600/50 hover:border-gray-500 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-lg"
+              className="px-4 py-2 md:px-6 md:py-3 bg-gray-700 hover:bg-gray-600 text-white border border-gray-500 hover:border-gray-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-xl font-medium"
             >
               <Mail size={16} className="md:hidden" />
               <Mail size={18} className="hidden md:block" />
@@ -430,9 +430,9 @@ Sent from Nishit's Portfolio Contact Form
               <span className="sm:hidden">Email</span>
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
               onClick={() => window.open('https://www.linkedin.com/in/nishit-vankawala-7240bb3a', '_blank')}
-              className="px-4 py-2 md:px-6 md:py-3 bg-blue-600/30 hover:bg-blue-600/50 text-blue-300 hover:text-blue-200 border border-blue-500/40 hover:border-blue-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-lg"
+              className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 hover:bg-blue-500 text-white border border-blue-500 hover:border-blue-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-xl font-medium"
             >
               <span className="hidden sm:inline">LinkedIn Message</span>
               <span className="sm:hidden">LinkedIn</span>
