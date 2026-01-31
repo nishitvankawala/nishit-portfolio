@@ -420,9 +420,9 @@ Sent from Nishit's Portfolio Contact Form
           <p className="text-gray-400 mb-6">Or reach out directly:</p>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(107, 114, 128, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(220, 38, 38, 0.3)" }}
               onClick={() => window.open('mailto:nishitvankawala@gmail.com', '_blank')}
-              className="px-4 py-2 md:px-6 md:py-3 bg-gray-700 hover:bg-gray-600 text-white border border-gray-500 hover:border-gray-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-xl font-medium"
+              className="px-4 py-2 md:px-6 md:py-3 bg-red-600 hover:bg-red-500 text-white border border-red-500 hover:border-red-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-xl font-medium"
             >
               <Mail size={16} className="md:hidden" />
               <Mail size={18} className="hidden md:block" />
