@@ -157,7 +157,7 @@ Sent from Nishit's Portfolio Contact Form
           <motion.h3 
             className="text-4xl md:text-6xl font-black mb-8"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #3B82F6, #6B7280, #ffffff)",
+              background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -422,7 +422,7 @@ Sent from Nishit's Portfolio Contact Form
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open('mailto:nishitvankawala@gmail.com', '_blank')}
-              className="px-4 py-2 md:px-6 md:py-3 bg-gray-800/50 hover:bg-gray-700/50 text-gray-300 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base"
+              className="px-4 py-2 md:px-6 md:py-3 bg-gray-700/80 hover:bg-gray-600/80 text-gray-200 hover:text-white border border-gray-600/50 hover:border-gray-500 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-lg"
             >
               <Mail size={16} className="md:hidden" />
               <Mail size={18} className="hidden md:block" />
@@ -432,7 +432,7 @@ Sent from Nishit's Portfolio Contact Form
             <motion.button
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open('https://www.linkedin.com/in/nishit-vankawala-7240bb3a', '_blank')}
-              className="px-4 py-2 md:px-6 md:py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base"
+              className="px-4 py-2 md:px-6 md:py-3 bg-blue-600/30 hover:bg-blue-600/50 text-blue-300 hover:text-blue-200 border border-blue-500/40 hover:border-blue-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-lg"
             >
               <span className="hidden sm:inline">LinkedIn Message</span>
               <span className="sm:hidden">LinkedIn</span>

@@ -72,12 +72,12 @@ export default function Navbar() {
               transition={{ delay: index * 0.1 + 0.3 }}
               whileHover={{ 
                 scale: 1.05,
-                backgroundColor: 'rgba(211, 47, 47, 0.1)'
+                backgroundColor: 'rgba(220, 38, 38, 0.1)'
               }}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                 activeSection === item.id
-                  ? 'text-accent bg-accent/10 border border-accent/30'
-                  : 'text-gray-300 hover:text-white'
+                  ? 'text-highlight bg-highlight/10 border border-highlight/30'
+                  : 'text-gray-300 hover:text-white hover:bg-highlight/5'
               }`}
             >
               <span className="text-xs">{item.icon}</span>

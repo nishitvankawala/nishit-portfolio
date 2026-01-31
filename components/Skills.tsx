@@ -31,9 +31,9 @@ const skillCategories = [
     title: "API & Integration",
     icon: Globe,
     skills: ["GraphQL", "React Query", "REST APIs"],
-    color: "from-pink-500/20 to-pink-600/5",
-    borderColor: "border-pink-500/30",
-    iconColor: "text-pink-400"
+    color: "from-red-500/20 to-red-600/5",
+    borderColor: "border-red-500/30",
+    iconColor: "text-red-400"
   },
   {
     title: "Cloud & DevOps",
@@ -60,7 +60,7 @@ export default function Skills() {
           <motion.h3
             className="text-4xl md:text-6xl font-black mb-8"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #3B82F6, #6B7280, #ffffff)",
+              background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -79,7 +79,7 @@ export default function Skills() {
             transition={{ delay: 0.3 }}
           >
             Technologies and frameworks I work with to build <span className="text-accent font-semibold">scalable applications</span> and 
-            <span className="text-secondary font-semibold"> enterprise solutions</span>.
+            <span className="text-highlight font-semibold"> enterprise solutions</span>.
           </motion.p>
         </motion.div>
 

@@ -89,7 +89,7 @@ export default function Architecture() {
           <motion.h3 
             className="text-4xl md:text-6xl font-black mb-8"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #3B82F6, #6B7280, #ffffff)",
+              background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -108,8 +108,8 @@ export default function Architecture() {
             transition={{ delay: 0.3 }}
           >
             Architectural decisions and engineering practices that power <span className="text-accent font-semibold">enterprise applications</span>. 
-            From <span className="text-secondary font-semibold">microservices design</span> to 
-            <span className="text-tertiary font-semibold">AI integration patterns</span> - 
+            From <span className="text-secondary font-semibold"> microservices design</span> to 
+            <span className="text-highlight font-semibold"> AI integration patterns</span> - 
             the technical foundation behind successful software delivery.
           </motion.p>
         </motion.div>
@@ -201,7 +201,7 @@ export default function Architecture() {
           >
             Combining <span className="text-accent font-semibold">modern development practices</span> with 
             <span className="text-secondary font-semibold"> proven architectural patterns</span> to deliver 
-            robust, scalable solutions that meet enterprise requirements and drive innovation.
+            robust, scalable solutions that meet enterprise requirements and drive <span className="text-highlight font-semibold">innovation</span>.
           </motion.p>
         </motion.div>
       </div>

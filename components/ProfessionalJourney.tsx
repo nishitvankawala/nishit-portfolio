@@ -230,7 +230,7 @@ export default function ProfessionalJourney() {
           <motion.h3 
             className="text-5xl md:text-7xl font-black mb-8"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #3B82F6, #6B7280, #ffffff)",
+              background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -249,9 +249,9 @@ export default function ProfessionalJourney() {
             transition={{ delay: 0.3 }}
           >
             My career progression from <span className="text-accent font-semibold">Software Developer to Senior Software Engineer</span>, 
-            building solutions across <span className="text-secondary font-semibold">hospitality</span>, 
-            <span className="text-tertiary font-semibold">enterprise ERP</span>, and 
-            <span className="text-highlight font-semibold">customer care platforms</span>. 
+            building solutions across <span className="text-secondary font-semibold"> hospitality</span>, 
+            <span className="text-tertiary font-semibold"> enterprise ERP</span>, and 
+            <span className="text-highlight font-semibold"> customer care platforms</span>. 
             Each role contributed to my expertise in the MERN stack ecosystem.
           </motion.p>
         </motion.div>

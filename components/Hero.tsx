@@ -156,7 +156,7 @@ export default function Hero() {
               <p className="text-gray-300 leading-relaxed text-xl">
                 <span className="text-accent font-semibold">7+ years</span> of expertise in building 
                 <span className="text-secondary font-semibold"> scalable web applications</span> and 
-                <span className="text-tertiary font-semibold">enterprise solutions</span>. 
+                <span className="text-highlight font-semibold"> enterprise solutions</span>. 
                 Specialized in full-stack development, team leadership, and delivering high-performance applications 
                 that serve millions of users.
               </p>
