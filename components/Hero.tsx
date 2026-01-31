@@ -83,7 +83,7 @@ export default function Hero() {
                 animate={{ backgroundPosition: "100% 50%" }}
                 transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
                 style={{
-                  background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
+                  background: "linear-gradient(90deg, #ffffff, #DC2626, #F97316, #EAB308, #16A34A, #ffffff)",
                   backgroundSize: "400% 100%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -130,10 +130,10 @@ export default function Hero() {
                   <div className="flex flex-wrap justify-center gap-3 text-sm font-mono">
                     {[
                       { tech: 'Node.js', years: '7+', color: 'bg-green-500/20 text-green-400 border-green-500/40' },
-                      { tech: 'React.js', years: '6+', color: 'bg-blue-500/20 text-blue-400 border-blue-500/40' },
-                      { tech: 'TypeScript', years: '5+', color: 'bg-blue-600/20 text-blue-300 border-blue-600/40' },
+                      { tech: 'React.js', years: '6+', color: 'bg-orange-500/20 text-orange-400 border-orange-500/40' },
+                      { tech: 'TypeScript', years: '5+', color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/40' },
                       { tech: 'MongoDB', years: '6+', color: 'bg-green-600/20 text-green-300 border-green-600/40' },
-                      { tech: 'PostgreSQL', years: '5+', color: 'bg-indigo-500/20 text-indigo-400 border-indigo-500/40' },
+                      { tech: 'PostgreSQL', years: '5+', color: 'bg-red-500/20 text-red-400 border-red-500/40' },
                       { tech: 'AWS', years: '4+', color: 'bg-orange-500/20 text-orange-400 border-orange-500/40' }
                     ].map((item, index) => (
                       <motion.div
@@ -264,11 +264,11 @@ export default function Hero() {
               <motion.button 
                 whileHover={{ 
                   scale: 1.02, 
-                  boxShadow: "0 8px 16px rgba(59, 130, 246, 0.3)",
+                  boxShadow: "0 8px 16px rgba(249, 115, 22, 0.3)",
                 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleDownloadResume}
-                className="bg-accent hover:bg-accent/90 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center gap-2 transition-all duration-300 font-semibold text-sm md:text-base shadow-md glow-blue"
+                className="bg-accent hover:bg-accent/90 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center gap-2 transition-all duration-300 font-semibold text-sm md:text-base shadow-md glow-orange"
               >
                 <Download size={16} />
                 <span className="hidden sm:inline">Resume</span>
@@ -278,7 +278,7 @@ export default function Hero() {
               <motion.button 
                 whileHover={{ 
                   scale: 1.02, 
-                  boxShadow: "0 8px 16px rgba(59, 130, 246, 0.2)",
+                  boxShadow: "0 8px 16px rgba(59, 130, 246, 0.3)",
                 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleLinkedIn}

@@ -6,10 +6,10 @@ module.exports = {
       colors: {
         base: "#0F1419",
         panel: "#1F2937",
-        accent: "#3B82F6", // Blue accent
-        secondary: "#6B7280", // Gray secondary
-        tertiary: "#4B5563", // Darker gray
-        highlight: "#DC2626", // Red highlight for special elements
+        accent: "#F97316", // Orange accent (was blue)
+        secondary: "#EAB308", // Yellow secondary (was gray)
+        tertiary: "#16A34A", // Green tertiary (was darker gray)
+        highlight: "#DC2626", // Red highlight (keeping red)
         neutral: "#9CA3AF" // Light gray for neutral elements
       },
       fontFamily: {

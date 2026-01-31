@@ -60,7 +60,7 @@ export default function Skills() {
           <motion.h3
             className="text-3xl md:text-6xl font-black mb-8 whitespace-nowrap"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
+              background: "linear-gradient(90deg, #ffffff, #DC2626, #F97316, #EAB308, #16A34A, #ffffff)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
