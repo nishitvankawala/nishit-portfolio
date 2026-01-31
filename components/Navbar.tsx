@@ -78,10 +78,10 @@ export default function Navbar() {
           }}
           className="relative cursor-pointer"
         >
-          <span className="font-bold text-lg md:text-xl bg-gradient-to-r from-accent via-secondary to-tertiary bg-clip-text text-transparent animate-gradient-x whitespace-nowrap">
+          <span className="font-bold text-lg md:text-xl bg-gradient-to-r from-red-600 via-gray-500 to-orange-500 bg-clip-text text-transparent animate-gradient-x whitespace-nowrap">
             Nishit Vankawala
           </span>
-          <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-accent to-secondary opacity-60"></div>
+          <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 opacity-60"></div>
         </motion.button>
 
         {/* Navigation items with enhanced animations */}
@@ -95,7 +95,8 @@ export default function Navbar() {
               transition={{ delay: index * 0.1 + 0.3 }}
               whileHover={{ 
                 scale: 1.05,
-                backgroundColor: 'rgba(220, 38, 38, 0.1)'
+                backgroundColor: 'rgba(220, 38, 38, 0.1)',
+                boxShadow: '0 4px 20px rgba(249, 115, 22, 0.3)'
               }}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                 activeSection === item.id
@@ -143,7 +144,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-base/95 backdrop-blur-xl border-t border-accent/20"
+            className="md:hidden bg-gradient-to-b from-base/95 via-red-900/10 to-base/95 backdrop-blur-xl border-t border-gradient-to-r from-red-500/20 via-orange-500/20 to-yellow-500/20"
           >
             <div className="px-6 py-4 space-y-2">
               {navItems.map((item, index) => (

@@ -11,9 +11,10 @@
 
 body {
   background:
-    radial-gradient(circle at 20% 30%, rgba(220,38,38,0.08), transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(107,114,128,0.06), transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(75,85,99,0.04), transparent 50%),
+    radial-gradient(circle at 20% 30%, rgba(220,38,38,0.12), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(249,115,22,0.08), transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(234,179,8,0.06), transparent 50%),
+    radial-gradient(circle at 60% 10%, rgba(22,163,74,0.04), transparent 50%),
     linear-gradient(135deg, #0F1419 0%, #1F2937 35%, #111827 100%);
   color: white;
   font-family: 'Inter', system-ui, sans-serif;
@@ -31,9 +32,10 @@ body::before {
   height: 100%;
   background-image: 
     radial-gradient(1px 1px at 25px 35px, rgba(255,255,255,0.15), transparent),
-    radial-gradient(1px 1px at 45px 75px, rgba(220,38,38,0.1), transparent),
-    radial-gradient(1px 1px at 95px 45px, rgba(107,114,128,0.08), transparent),
-    radial-gradient(1px 1px at 135px 85px, rgba(75,85,99,0.06), transparent);
+    radial-gradient(1px 1px at 45px 75px, rgba(220,38,38,0.12), transparent),
+    radial-gradient(1px 1px at 95px 45px, rgba(249,115,22,0.1), transparent),
+    radial-gradient(1px 1px at 135px 85px, rgba(234,179,8,0.08), transparent),
+    radial-gradient(1px 1px at 175px 25px, rgba(22,163,74,0.06), transparent);
   background-repeat: repeat;
   background-size: 160px 100px;
   pointer-events: none;
@@ -50,7 +52,7 @@ body::before {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar with gradient */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -60,17 +62,17 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #EF4444, #FB923C);
+  background: linear-gradient(180deg, #DC2626, #F97316, #EAB308);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #DC2626, #F97316);
+  background: linear-gradient(180deg, #B91C1C, #EA580C, #D97706);
 }
 
-/* Subtle glow effects */
+/* Subtle glow effects with gradients */
 .glow-orange {
-  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(234, 179, 8, 0.2);
 }
 
 .glow-blue {
@@ -78,11 +80,15 @@ body::before {
 }
 
 .glow-red {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.4), 0 0 40px rgba(249, 115, 22, 0.2);
 }
 
-.glow-gray {
-  box-shadow: 0 0 20px rgba(107, 114, 128, 0.2);
+.glow-green {
+  box-shadow: 0 0 20px rgba(22, 163, 74, 0.4), 0 0 40px rgba(234, 179, 8, 0.2);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.4), 0 0 40px rgba(249, 115, 22, 0.2);
 }
 
 /* Text gradient animations */
@@ -99,4 +105,28 @@ body::before {
 
 .animate-gradient-x {
   animation: gradient-x 4s ease infinite;
+}
+/* Additional gradient utilities */
+.gradient-warm {
+  background: linear-gradient(135deg, #DC2626, #F97316, #EAB308);
+}
+
+.gradient-warm-subtle {
+  background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(249,115,22,0.1), rgba(234,179,8,0.1));
+}
+
+.gradient-border-warm {
+  border-image: linear-gradient(135deg, #DC2626, #F97316, #EAB308) 1;
+}
+
+.text-gradient-warm {
+  background: linear-gradient(135deg, #DC2626, #F97316, #EAB308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-gradient-warm:hover {
+  background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(249,115,22,0.1), rgba(234,179,8,0.1));
+  transition: all 0.3s ease;
 }

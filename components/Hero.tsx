@@ -83,8 +83,8 @@ export default function Hero() {
                 animate={{ backgroundPosition: "100% 50%" }}
                 transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
                 style={{
-                  background: "linear-gradient(90deg, #ffffff, #DC2626, #F97316, #EAB308, #16A34A, #ffffff)",
-                  backgroundSize: "400% 100%",
+                  background: "linear-gradient(90deg, #DC2626, #6B7280, #F97316)",
+                  backgroundSize: "300% 100%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -107,9 +107,9 @@ export default function Hero() {
                 </h2>
               </div>
               
-              {/* Small separator */}
+              {/* Small separator with gradient */}
               <div className="flex justify-center my-6">
-                <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gray-500/50 to-transparent"></div>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-red-500/60 via-orange-500/60 to-transparent"></div>
               </div>
               
               <motion.div 
@@ -205,7 +205,7 @@ export default function Hero() {
               transition={{delay:2, duration:0.8}}
               className="max-w-5xl mx-auto space-y-6"
             >
-              <div className="bg-gradient-to-r from-gray-800/40 to-gray-900/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700/30">
+              <div className="bg-gradient-to-br from-gray-800/40 via-red-900/20 to-orange-900/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gradient-to-r from-red-500/30 via-orange-500/30 to-yellow-500/30">
                 <p className="text-gray-200 leading-relaxed text-lg md:text-xl text-center">
                   <span className="text-highlight font-bold">7.5+ years</span> of architecting and delivering 
                   <span className="text-accent font-semibold"> enterprise-grade applications</span> across 
