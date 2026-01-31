@@ -58,7 +58,7 @@ export default function Skills() {
           className="text-center mb-20"
         >
           <motion.h3
-            className="text-4xl md:text-6xl font-black mb-8"
+            className="text-3xl md:text-6xl font-black mb-8 whitespace-nowrap"
             style={{
               background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
               backgroundSize: "300% 100%",

@@ -228,7 +228,7 @@ export default function ProfessionalJourney() {
           transition={{ duration: 1 }}
         >
           <motion.h3 
-            className="text-5xl md:text-7xl font-black mb-8"
+            className="text-3xl md:text-7xl font-black mb-8 whitespace-nowrap"
             style={{
               background: "linear-gradient(90deg, #ffffff, #DC2626, #3B82F6, #6B7280, #ffffff)",
               backgroundSize: "300% 100%",

@@ -78,7 +78,7 @@ export default function Hero() {
               transition={{delay:0.3}}
             >
               <motion.h1 
-                className="text-5xl md:text-7xl font-black leading-tight"
+                className="text-4xl md:text-7xl font-black leading-tight whitespace-nowrap"
                 initial={{ backgroundPosition: "0% 50%" }}
                 animate={{ backgroundPosition: "100% 50%" }}
                 transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
@@ -99,23 +99,29 @@ export default function Hero() {
               initial={{opacity:0,y:30}} 
               animate={{opacity:1,y:0}}
               transition={{delay:0.6, duration:0.8}}
-              className="space-y-6"
+              className="space-y-4"
             >
-              <div className="space-y-4">
-                <h2 className="text-xl md:text-3xl font-medium text-gray-500/80">
+              <div className="space-y-0">
+                <h2 className="text-xl md:text-3xl font-medium text-gray-400 -mt-4">
                   Senior Full Stack Engineer
                 </h2>
-                <motion.div 
-                  className="flex flex-wrap justify-center gap-4 text-sm md:text-base"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <span className="text-highlight font-bold">7.5+ Years Experience</span>
-                  <span className="text-accent font-bold">Enterprise Architecture</span>
-                  <span className="text-secondary font-bold">Team Leadership</span>
-                </motion.div>
               </div>
+              
+              {/* Small separator */}
+              <div className="flex justify-center my-6">
+                <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gray-500/50 to-transparent"></div>
+              </div>
+              
+              <motion.div 
+                className="flex flex-wrap justify-center gap-4 text-sm md:text-base mt-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                <span className="text-highlight font-bold">7.5+ Years Experience</span>
+                <span className="text-accent font-bold">Enterprise Architecture</span>
+                <span className="text-secondary font-bold">Team Leadership</span>
+              </motion.div>
               
               {/* Senior-Level Technology Stack - Compact & Complete */}
               <div className="space-y-6">

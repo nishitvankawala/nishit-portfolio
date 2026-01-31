@@ -1,11 +1,12 @@
 
 'use client'
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navbar() {
   const [solid, setSolid] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,6 +39,22 @@ export default function Navbar() {
     { id: 'contact', label: 'Contact', icon: '📧' },
   ]
 
+  const handleMobileMenuClick = (itemId: string) => {
+    console.log('Mobile menu clicked:', itemId) // Debug log
+    setMobileMenuOpen(false)
+    
+    // Small delay to ensure menu closes first
+    setTimeout(() => {
+      const element = document.getElementById(itemId)
+      console.log('Element found:', element) // Debug log
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      } else {
+        console.error('Element not found:', itemId)
+      }
+    }, 100)
+  }
+
   return (
     <motion.nav 
       initial={{ y: -100 }}
@@ -50,16 +67,22 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
-        {/* Logo with enhanced styling */}
-        <motion.div
+        {/* Logo with enhanced styling - clickable to go to hero */}
+        <motion.button
           whileHover={{ scale: 1.05 }}
-          className="relative"
+          onClick={() => {
+            const heroSection = document.getElementById('hero')
+            if (heroSection) {
+              heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          }}
+          className="relative cursor-pointer"
         >
-          <span className="font-bold text-xl bg-gradient-to-r from-accent via-secondary to-tertiary bg-clip-text text-transparent animate-gradient-x">
+          <span className="font-bold text-lg md:text-xl bg-gradient-to-r from-accent via-secondary to-tertiary bg-clip-text text-transparent animate-gradient-x whitespace-nowrap">
             Nishit Vankawala
           </span>
           <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-accent to-secondary opacity-60"></div>
-        </motion.div>
+        </motion.button>
 
         {/* Navigation items with enhanced animations */}
         <div className="hidden md:flex space-x-1">
@@ -86,18 +109,69 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile menu indicator */}
-        <motion.div 
-          className="md:hidden"
+        {/* Mobile menu button */}
+        <motion.button 
+          className="md:hidden p-2"
           whileTap={{ scale: 0.9 }}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
-            <div className="w-4 h-0.5 bg-accent"></div>
-            <div className="w-4 h-0.5 bg-secondary"></div>
-            <div className="w-4 h-0.5 bg-tertiary"></div>
+            <motion.div 
+              className="w-4 h-0.5 bg-accent"
+              animate={mobileMenuOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.div 
+              className="w-4 h-0.5 bg-secondary"
+              animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.div 
+              className="w-4 h-0.5 bg-tertiary"
+              animate={mobileMenuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.3 }}
+            />
           </div>
-        </motion.div>
+        </motion.button>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-base/95 backdrop-blur-xl border-t border-accent/20"
+          >
+            <div className="px-6 py-4 space-y-2">
+              {navItems.map((item, index) => (
+                <motion.button
+                  key={item.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    console.log('Button clicked:', item.id) // Debug log
+                    handleMobileMenuClick(item.id)
+                  }}
+                  className={`w-full text-left px-4 py-4 rounded-lg text-base font-medium transition-all duration-300 flex items-center gap-3 active:bg-highlight/20 ${
+                    activeSection === item.id
+                      ? 'text-highlight bg-highlight/10 border border-highlight/30'
+                      : 'text-gray-300 hover:text-white hover:bg-highlight/5'
+                  }`}
+                >
+                  <span className="text-lg">{item.icon}</span>
+                  {item.label}
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   )
 }
