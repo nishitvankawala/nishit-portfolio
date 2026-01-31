@@ -35,7 +35,7 @@ export default function Hero() {
   return (
     <div className="relative z-10" id="hero">
       {/* Main Hero Section */}
-      <section className="min-h-screen flex items-center px-6 md:px-12 pt-20 pb-32 relative overflow-hidden">
+      <section className="min-h-screen flex items-center px-6 md:px-12 pt-20 pb-16 relative overflow-hidden">
         {/* Floating tech icons */}
         <div className="absolute inset-0 pointer-events-none">
           {techIcons.map((tech, index) => (
@@ -69,7 +69,7 @@ export default function Hero() {
             initial={{opacity:0,y:50}} 
             animate={{opacity:1,y:0}} 
             transition={{duration:1, ease: "easeOut"}}
-            className="text-center space-y-8"
+            className="text-center space-y-6"
           >
             {/* Name with typing effect */}
             <motion.div
@@ -94,48 +94,73 @@ export default function Hero() {
               </motion.h1>
             </motion.div>
             
-            {/* Enhanced subtitle */}
+            {/* Enhanced subtitle with seniority indicators */}
             <motion.div
               initial={{opacity:0,y:30}} 
               animate={{opacity:1,y:0}}
               transition={{delay:0.6, duration:0.8}}
               className="space-y-6"
             >
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-200">
-                Senior Full Stack Engineer
-              </h2>
-              
-              {/* Core MERN Stack */}
               <div className="space-y-4">
-                <p className="text-gray-400 text-sm font-mono">Core Stack</p>
-                <div className="flex flex-wrap justify-center gap-3 text-sm font-mono">
-                  {['Node.js', 'React.js', 'JavaScript', 'MongoDB', 'MySQL', 'PostgreSQL'].map((tech, index) => (
-                    <motion.span
-                      key={tech}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.8 + index * 0.1 }}
-                      className="px-4 py-2 bg-accent/20 text-accent border border-accent/40 rounded-full hover:bg-accent/30 transition-colors font-semibold"
-                    >
-                      {tech}
-                    </motion.span>
-                  ))}
+                <h2 className="text-3xl md:text-5xl font-black text-white">
+                  Senior Full Stack Engineer
+                </h2>
+                <motion.div 
+                  className="flex flex-wrap justify-center gap-4 text-sm md:text-base"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                >
+                  <span className="text-highlight font-bold">7.5+ Years Experience</span>
+                  <span className="text-accent font-bold">Enterprise Architecture</span>
+                  <span className="text-secondary font-bold">Team Leadership</span>
+                </motion.div>
+              </div>
+              
+              {/* Senior-Level Technology Stack - Compact & Complete */}
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <p className="text-gray-300 text-base font-semibold">Core Technologies</p>
+                  <div className="flex flex-wrap justify-center gap-3 text-sm font-mono">
+                    {[
+                      { tech: 'Node.js', years: '7+', color: 'bg-green-500/20 text-green-400 border-green-500/40' },
+                      { tech: 'React.js', years: '6+', color: 'bg-blue-500/20 text-blue-400 border-blue-500/40' },
+                      { tech: 'TypeScript', years: '5+', color: 'bg-blue-600/20 text-blue-300 border-blue-600/40' },
+                      { tech: 'MongoDB', years: '6+', color: 'bg-green-600/20 text-green-300 border-green-600/40' },
+                      { tech: 'PostgreSQL', years: '5+', color: 'bg-indigo-500/20 text-indigo-400 border-indigo-500/40' },
+                      { tech: 'AWS', years: '4+', color: 'bg-orange-500/20 text-orange-400 border-orange-500/40' }
+                    ].map((item, index) => (
+                      <motion.div
+                        key={item.tech}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 1.2 + index * 0.1 }}
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        className={`px-4 py-2 ${item.color} border rounded-xl hover:shadow-lg transition-all duration-300 font-semibold`}
+                      >
+                        <div className="text-center">
+                          <div className="font-bold">{item.tech}</div>
+                          <div className="text-xs opacity-80">{item.years} years</div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
                 
-                {/* Extended Skills */}
-                <div className="space-y-2">
-                  <p className="text-gray-400 text-sm font-mono">Also Expert In</p>
+                {/* Also Expert In - Secondary Skills */}
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-base font-semibold">Also Expert In</p>
                   <div className="flex flex-wrap justify-center gap-2 text-xs font-mono">
                     {[
-                      'TypeScript', 'Next.js', 'NestJS', 'Fastify', 
-                      'Platformatic', 'Prisma', 'GraphQL', 'Redis', 
-                      'AWS', 'Socket.io', 'Docker', 'Angular'
+                      'Next.js', 'NestJS', 'Fastify', 'Platformatic', 
+                      'Prisma', 'GraphQL', 'Redis', 'Socket.io', 
+                      'Docker', 'Angular', 'MySQL', 'Express.js'
                     ].map((tech, index) => (
                       <motion.span
                         key={tech}
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 1.2 + index * 0.05 }}
+                        transition={{ delay: 1.8 + index * 0.05 }}
                         className="px-3 py-1 bg-secondary/10 text-secondary border border-secondary/30 rounded-full hover:bg-secondary/20 transition-colors"
                       >
                         {tech}
@@ -143,90 +168,133 @@ export default function Hero() {
                     ))}
                   </div>
                 </div>
+                
+                {/* Leadership & Architecture Skills - Compact */}
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-base font-semibold">Leadership & Architecture</p>
+                  <div className="flex flex-wrap justify-center gap-2 text-xs">
+                    {[
+                      'Microservices Architecture', 'Team Leadership', 'System Design', 
+                      'Performance Optimization', 'DevOps & CI/CD', 'Code Reviews & Mentoring'
+                    ].map((skill, index) => (
+                      <motion.span
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 2.2 + index * 0.05 }}
+                        className="px-3 py-2 bg-highlight/10 text-highlight border border-highlight/30 rounded-lg hover:bg-highlight/20 transition-colors font-medium"
+                      >
+                        {skill}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
             
-            {/* Enhanced description */}
+            {/* Enhanced senior-level description */}
             <motion.div
               initial={{opacity:0,y:30}} 
               animate={{opacity:1,y:0}}
-              transition={{delay:1, duration:0.8}}
-              className="max-w-4xl mx-auto space-y-6"
+              transition={{delay:2, duration:0.8}}
+              className="max-w-5xl mx-auto space-y-6"
             >
-              <p className="text-gray-300 leading-relaxed text-xl">
-                <span className="text-accent font-semibold">7+ years</span> of expertise in building 
-                <span className="text-secondary font-semibold"> scalable web applications</span> and 
-                <span className="text-highlight font-semibold"> enterprise solutions</span>. 
-                Specialized in full-stack development, team leadership, and delivering high-performance applications 
-                that serve millions of users.
-              </p>
+              <div className="bg-gradient-to-r from-gray-800/40 to-gray-900/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700/30">
+                <p className="text-gray-200 leading-relaxed text-lg md:text-xl text-center">
+                  <span className="text-highlight font-bold">7.5+ years</span> of architecting and delivering 
+                  <span className="text-accent font-semibold"> enterprise-grade applications</span> across 
+                  <span className="text-secondary font-semibold"> hospitality, ERP, and customer care platforms</span>. 
+                  Led cross-functional teams, designed scalable microservices architectures, and specialized in 
+                  <span className="text-green-400 font-semibold"> full-stack MERN development</span> with proven expertise in 
+                  system optimization and team leadership.
+                </p>
+              </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm max-w-3xl mx-auto">
+              {/* Authentic Senior Achievements */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 {[
-                  { label: "Full Stack Development", color: "text-blue-500", bgColor: "bg-blue-500" },
-                  { label: "Team Leadership", color: "text-gray-500", bgColor: "bg-gray-500" },
-                  { label: "System Architecture", color: "text-slate-600", bgColor: "bg-slate-600" },
-                  { label: "Performance Optimization", color: "text-gray-400", bgColor: "bg-gray-400" }
-                ].map((item, index) => (
-                  <div key={item.label} className="flex items-center gap-2">
-                    <motion.div 
-                      className={`w-2 h-2 ${item.bgColor} rounded-full flex-shrink-0`}
-                      animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
-                    />
-                    <span className="text-gray-400 whitespace-nowrap">{item.label}</span>
-                  </div>
+                  { 
+                    title: "Enterprise Leadership", 
+                    desc: "Led development teams across TrooTech, Gateway Group, Doyenhub, Agami Tech, and Yanolja Cloud Solutions",
+                    icon: "👥",
+                    color: "border-accent/30 bg-accent/5"
+                  },
+                  { 
+                    title: "System Architecture", 
+                    desc: "Designed ERP modules, AI-powered platforms, microservices, and omnichannel customer care systems",
+                    icon: "🏗️",
+                    color: "border-highlight/30 bg-highlight/5"
+                  },
+                  { 
+                    title: "Technical Excellence", 
+                    desc: "MERN stack expertise, React migration leadership, API consolidation, and real-time dashboard development",
+                    icon: "⚡",
+                    color: "border-green-400/30 bg-green-400/5"
+                  }
+                ].map((achievement, index) => (
+                  <motion.div
+                    key={achievement.title}
+                    className={`p-4 rounded-xl border ${achievement.color} backdrop-blur-sm hover:scale-105 transition-all duration-300`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 2.2 + index * 0.2 }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="text-2xl mb-2">{achievement.icon}</div>
+                    <h4 className="font-bold text-white mb-2">{achievement.title}</h4>
+                    <p className="text-gray-400 text-xs leading-relaxed">{achievement.desc}</p>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Enhanced action buttons */}
+            {/* Compact mobile-friendly action buttons */}
             <motion.div 
               initial={{opacity:0,y:30}} 
               animate={{opacity:1,y:0}}
-              transition={{delay:1.4, duration:0.8}}
-              className="flex flex-wrap justify-center gap-3 pt-8"
+              transition={{delay:2.8, duration:0.8}}
+              className="flex flex-wrap justify-center gap-2 md:gap-3 pt-6"
             >
               <motion.button 
                 whileHover={{ 
-                  scale: 1.05, 
-                  boxShadow: "0 15px 30px rgba(59, 130, 246, 0.3)",
+                  scale: 1.02, 
+                  boxShadow: "0 8px 16px rgba(59, 130, 246, 0.3)",
                 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleDownloadResume}
-                className="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 font-semibold text-base shadow-lg glow-blue"
+                className="bg-accent hover:bg-accent/90 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center gap-2 transition-all duration-300 font-semibold text-sm md:text-base shadow-md glow-blue"
               >
-                <Download size={18} />
-                <span className="hidden sm:inline">Download Resume</span>
-                <span className="sm:hidden">Resume</span>
+                <Download size={16} />
+                <span className="hidden sm:inline">Resume</span>
+                <span className="sm:hidden">CV</span>
               </motion.button>
               
               <motion.button 
                 whileHover={{ 
-                  scale: 1.05, 
-                  boxShadow: "0 15px 30px rgba(59, 130, 246, 0.3)",
+                  scale: 1.02, 
+                  boxShadow: "0 8px 16px rgba(59, 130, 246, 0.2)",
                 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleLinkedIn}
-                className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 font-semibold text-base shadow-lg"
+                className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center gap-2 transition-all duration-300 font-semibold text-sm md:text-base shadow-md"
               >
-                <Linkedin size={18} />
+                <Linkedin size={16} />
                 <span className="hidden sm:inline">LinkedIn</span>
                 <span className="sm:hidden">Profile</span>
               </motion.button>
               
               <motion.button 
                 whileHover={{ 
-                  scale: 1.05, 
-                  boxShadow: "0 15px 30px rgba(220, 38, 38, 0.3)",
+                  scale: 1.02, 
+                  boxShadow: "0 8px 16px rgba(220, 38, 38, 0.3)",
                 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleContactClick}
-                className="bg-highlight hover:bg-highlight/90 text-white px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 font-semibold text-base shadow-lg glow-red"
+                className="bg-highlight hover:bg-highlight/90 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center gap-2 transition-all duration-300 font-semibold text-sm md:text-base shadow-md glow-red"
               >
-                <Mail size={18} />
-                <span className="hidden sm:inline">Let's Talk</span>
-                <span className="sm:hidden">Contact</span>
+                <Mail size={16} />
+                <span className="hidden sm:inline">Contact</span>
+                <span className="sm:hidden">Talk</span>
               </motion.button>
             </motion.div>
           </motion.div>

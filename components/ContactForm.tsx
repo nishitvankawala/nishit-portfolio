@@ -420,14 +420,15 @@ Sent from Nishit's Portfolio Contact Form
           <p className="text-gray-400 mb-6">Or reach out directly:</p>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(220, 38, 38, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(220, 38, 38, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => window.open('mailto:nishitvankawala@gmail.com', '_blank')}
-              className="px-4 py-2 md:px-6 md:py-3 bg-red-600 hover:bg-red-500 text-white border border-red-500 hover:border-red-400 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm md:text-base shadow-xl font-medium"
+              className="bg-highlight hover:bg-highlight/90 text-white px-4 py-2 md:px-6 md:py-3 rounded-xl flex items-center gap-2 transition-all duration-300 font-semibold text-sm md:text-base shadow-lg glow-red"
             >
-              <Mail size={16} className="md:hidden" />
-              <Mail size={18} className="hidden md:block" />
-              <span className="hidden sm:inline">nishitvankawala@gmail.com</span>
-              <span className="sm:hidden">Email</span>
+              <Mail size={16} className="md:hidden text-white" />
+              <Mail size={18} className="hidden md:block text-white" />
+              <span className="hidden sm:inline text-white">nishitvankawala@gmail.com</span>
+              <span className="sm:hidden text-white">Email</span>
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
