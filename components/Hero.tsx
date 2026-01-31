@@ -102,7 +102,7 @@ export default function Hero() {
               className="space-y-6"
             >
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-5xl font-black text-white">
+                <h2 className="text-xl md:text-3xl font-medium text-gray-500/80">
                   Senior Full Stack Engineer
                 </h2>
                 <motion.div 
