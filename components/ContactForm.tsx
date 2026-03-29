@@ -427,8 +427,7 @@ Sent from Nishit's Portfolio Contact Form
             >
               <Mail size={16} className="md:hidden text-white" />
               <Mail size={18} className="hidden md:block text-white" />
-              <span className="hidden sm:inline text-white">nishitvankawala@gmail.com</span>
-              <span className="sm:hidden text-white">Email</span>
+              <span className="text-white">Email Me</span>
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
