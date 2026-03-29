@@ -6,7 +6,7 @@ import { Download, Linkedin, Mail, Code, Database, Server, Smartphone } from 'lu
 export default function Hero() {
   const handleDownloadResume = () => {
     const link = document.createElement('a')
-    link.href = '/Nishit-Vankawala-2026.pdf'
+    link.href = '/Nishit-Vankawala-Resume-2026.pdf'
     link.download = 'Nishit-Vankawala-Resume.pdf'
     document.body.appendChild(link)
     link.click()
