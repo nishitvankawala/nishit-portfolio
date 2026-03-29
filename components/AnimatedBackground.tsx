@@ -98,14 +98,14 @@ export default function AnimatedBackground() {
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
     >
       {/* Dynamic gradient orbs with enhanced animations */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-accent/20 via-accent/8 to-transparent rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-radial from-secondary/18 via-secondary/6 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-radial from-tertiary/15 via-tertiary/5 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }} />
-      <div className="absolute top-1/6 right-1/3 w-64 h-64 bg-gradient-radial from-highlight/12 via-highlight/4 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '6s' }} />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-accent/10 via-accent/4 to-transparent rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-radial from-secondary/8 via-secondary/3 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-radial from-tertiary/6 via-tertiary/2 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-1/6 right-1/3 w-64 h-64 bg-gradient-radial from-highlight/6 via-highlight/2 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '6s' }} />
       
       {/* Additional moving orbs */}
-      <div className="absolute top-2/3 left-1/6 w-48 h-48 bg-gradient-radial from-accent/10 via-accent/3 to-transparent rounded-full blur-2xl animate-float" />
-      <div className="absolute top-1/3 right-1/6 w-56 h-56 bg-gradient-radial from-secondary/12 via-secondary/4 to-transparent rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-2/3 left-1/6 w-48 h-48 bg-gradient-radial from-accent/5 via-accent/2 to-transparent rounded-full blur-2xl animate-float" />
+      <div className="absolute top-1/3 right-1/6 w-56 h-56 bg-gradient-radial from-secondary/6 via-secondary/2 to-transparent rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }} />
       
       {/* Animated grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]">

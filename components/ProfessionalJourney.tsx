@@ -230,14 +230,14 @@ export default function ProfessionalJourney() {
           <motion.h3 
             className="text-3xl md:text-7xl font-black mb-8 whitespace-nowrap"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #DC2626, #F97316, #EAB308, #16A34A, #ffffff)",
+              background: "linear-gradient(90deg, #e5e7eb, #991B1B, #C2410C, #B45309, #166534, #e5e7eb)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-            transition={{ duration: 8, repeat: Infinity }}
+            transition={{ duration: 10, repeat: Infinity }}
           >
             Professional Journey
           </motion.h3>
@@ -258,7 +258,7 @@ export default function ProfessionalJourney() {
 
         <div className="relative" ref={timelineRef}>
           {/* Enhanced timeline line with gradient */}
-          <div className="absolute left-1/2 top-0 w-1 bg-gradient-to-b from-accent via-secondary to-tertiary timeline-line transform -translate-x-1/2 rounded-full shadow-lg"></div>
+          <div className="absolute left-1/2 top-0 w-1 bg-gradient-to-b from-accent via-secondary to-tertiary timeline-line transform -translate-x-1/2 rounded-full opacity-50"></div>
 
           <div className="space-y-20">
             {journeyData.map((item, index) => (

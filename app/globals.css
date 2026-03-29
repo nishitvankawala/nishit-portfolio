@@ -11,11 +11,11 @@
 
 body {
   background:
-    radial-gradient(circle at 20% 30%, rgba(220,38,38,0.12), transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(249,115,22,0.08), transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(234,179,8,0.06), transparent 50%),
-    radial-gradient(circle at 60% 10%, rgba(22,163,74,0.04), transparent 50%),
-    linear-gradient(135deg, #0F1419 0%, #1F2937 35%, #111827 100%);
+    radial-gradient(circle at 20% 30%, rgba(180,28,28,0.06), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(200,90,20,0.04), transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(180,140,10,0.03), transparent 50%),
+    radial-gradient(circle at 60% 10%, rgba(15,120,55,0.02), transparent 50%),
+    linear-gradient(135deg, #0F1419 0%, #1A2030 35%, #0D1117 100%);
   color: white;
   font-family: 'Inter', system-ui, sans-serif;
   min-height: 100vh;
@@ -31,11 +31,11 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(1px 1px at 25px 35px, rgba(255,255,255,0.15), transparent),
-    radial-gradient(1px 1px at 45px 75px, rgba(220,38,38,0.12), transparent),
-    radial-gradient(1px 1px at 95px 45px, rgba(249,115,22,0.1), transparent),
-    radial-gradient(1px 1px at 135px 85px, rgba(234,179,8,0.08), transparent),
-    radial-gradient(1px 1px at 175px 25px, rgba(22,163,74,0.06), transparent);
+    radial-gradient(1px 1px at 25px 35px, rgba(255,255,255,0.08), transparent),
+    radial-gradient(1px 1px at 45px 75px, rgba(180,28,28,0.06), transparent),
+    radial-gradient(1px 1px at 95px 45px, rgba(200,90,20,0.05), transparent),
+    radial-gradient(1px 1px at 135px 85px, rgba(180,140,10,0.04), transparent),
+    radial-gradient(1px 1px at 175px 25px, rgba(15,120,55,0.03), transparent);
   background-repeat: repeat;
   background-size: 160px 100px;
   pointer-events: none;
@@ -62,33 +62,33 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #DC2626, #F97316, #EAB308);
+  background: linear-gradient(180deg, #7f1d1d, #92400e, #78350f);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #B91C1C, #EA580C, #D97706);
+  background: linear-gradient(180deg, #991b1b, #b45309, #92400e);
 }
 
 /* Subtle glow effects with gradients */
 .glow-orange {
-  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(234, 179, 8, 0.2);
+  box-shadow: 0 0 12px rgba(180, 90, 20, 0.2), 0 0 24px rgba(160, 110, 10, 0.1);
 }
 
 .glow-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 12px rgba(37, 99, 180, 0.2);
 }
 
 .glow-red {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.4), 0 0 40px rgba(249, 115, 22, 0.2);
+  box-shadow: 0 0 12px rgba(153, 27, 27, 0.2), 0 0 24px rgba(180, 90, 20, 0.1);
 }
 
 .glow-green {
-  box-shadow: 0 0 20px rgba(22, 163, 74, 0.4), 0 0 40px rgba(234, 179, 8, 0.2);
+  box-shadow: 0 0 12px rgba(15, 120, 55, 0.2), 0 0 24px rgba(160, 110, 10, 0.1);
 }
 
 .glow-yellow {
-  box-shadow: 0 0 20px rgba(234, 179, 8, 0.4), 0 0 40px rgba(249, 115, 22, 0.2);
+  box-shadow: 0 0 12px rgba(160, 110, 10, 0.2), 0 0 24px rgba(180, 90, 20, 0.1);
 }
 
 /* Text gradient animations */
@@ -108,25 +108,25 @@ body::before {
 }
 /* Additional gradient utilities */
 .gradient-warm {
-  background: linear-gradient(135deg, #DC2626, #F97316, #EAB308);
+  background: linear-gradient(135deg, #7f1d1d, #92400e, #78350f);
 }
 
 .gradient-warm-subtle {
-  background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(249,115,22,0.1), rgba(234,179,8,0.1));
+  background: linear-gradient(135deg, rgba(127,29,29,0.08), rgba(146,64,14,0.08), rgba(120,53,15,0.08));
 }
 
 .gradient-border-warm {
-  border-image: linear-gradient(135deg, #DC2626, #F97316, #EAB308) 1;
+  border-image: linear-gradient(135deg, #7f1d1d, #92400e, #78350f) 1;
 }
 
 .text-gradient-warm {
-  background: linear-gradient(135deg, #DC2626, #F97316, #EAB308);
+  background: linear-gradient(135deg, #b91c1c, #c2410c, #b45309);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .hover-gradient-warm:hover {
-  background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(249,115,22,0.1), rgba(234,179,8,0.1));
+  background: linear-gradient(135deg, rgba(127,29,29,0.08), rgba(146,64,14,0.08), rgba(120,53,15,0.08));
   transition: all 0.3s ease;
 }

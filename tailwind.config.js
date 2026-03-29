@@ -5,12 +5,12 @@ module.exports = {
     extend: {
       colors: {
         base: "#0F1419",
-        panel: "#1F2937",
-        accent: "#F97316", // Orange accent (was blue)
-        secondary: "#EAB308", // Yellow secondary (was gray)
-        tertiary: "#16A34A", // Green tertiary (was darker gray)
-        highlight: "#DC2626", // Red highlight (keeping red)
-        neutral: "#9CA3AF" // Light gray for neutral elements
+        panel: "#161B22",
+        accent: "#C2410C",    // muted burnt orange
+        secondary: "#B45309", // muted amber
+        tertiary: "#166534",  // muted dark green
+        highlight: "#991B1B", // muted dark red
+        neutral: "#6B7280"    // gray
       },
       fontFamily: {
         'mono': ['JetBrains Mono', 'monospace'],

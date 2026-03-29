@@ -83,7 +83,7 @@ export default function Hero() {
                 animate={{ backgroundPosition: "100% 50%" }}
                 transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
                 style={{
-                  background: "linear-gradient(90deg, #DC2626, #6B7280, #F97316)",
+                  background: "linear-gradient(90deg, #991B1B, #6B7280, #C2410C)",
                   backgroundSize: "300% 100%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -109,7 +109,7 @@ export default function Hero() {
               
               {/* Small separator with gradient */}
               <div className="flex justify-center my-6">
-                <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-red-500/60 via-orange-500/60 to-transparent"></div>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-red-900/40 via-orange-900/40 to-transparent"></div>
               </div>
               
               <motion.div 
@@ -129,12 +129,12 @@ export default function Hero() {
                   <p className="text-gray-300 text-base font-semibold">Core Technologies</p>
                   <div className="flex flex-wrap justify-center gap-3 text-sm font-mono">
                     {[
-                      { tech: 'Node.js', years: '7+', color: 'bg-green-500/20 text-green-400 border-green-500/40' },
-                      { tech: 'React.js', years: '6+', color: 'bg-orange-500/20 text-orange-400 border-orange-500/40' },
-                      { tech: 'TypeScript', years: '5+', color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/40' },
-                      { tech: 'MongoDB', years: '6+', color: 'bg-green-600/20 text-green-300 border-green-600/40' },
-                      { tech: 'PostgreSQL', years: '5+', color: 'bg-red-500/20 text-red-400 border-red-500/40' },
-                      { tech: 'AWS', years: '4+', color: 'bg-orange-500/20 text-orange-400 border-orange-500/40' }
+                      { tech: 'Node.js', years: '7+', color: 'bg-green-900/30 text-green-600 border-green-900/50' },
+                      { tech: 'React.js', years: '6+', color: 'bg-orange-900/30 text-orange-600 border-orange-900/50' },
+                      { tech: 'TypeScript', years: '5+', color: 'bg-yellow-900/30 text-yellow-700 border-yellow-900/50' },
+                      { tech: 'MongoDB', years: '6+', color: 'bg-green-900/30 text-green-700 border-green-900/50' },
+                      { tech: 'PostgreSQL', years: '5+', color: 'bg-red-900/30 text-red-700 border-red-900/50' },
+                      { tech: 'AWS', years: '4+', color: 'bg-orange-900/30 text-orange-600 border-orange-900/50' }
                     ].map((item, index) => (
                       <motion.div
                         key={item.tech}
@@ -205,7 +205,7 @@ export default function Hero() {
               transition={{delay:2, duration:0.8}}
               className="max-w-5xl mx-auto space-y-6"
             >
-              <div className="bg-gradient-to-br from-gray-800/40 via-red-900/20 to-orange-900/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gradient-to-r from-red-500/30 via-orange-500/30 to-yellow-500/30">
+              <div className="bg-gradient-to-br from-gray-800/40 via-red-950/10 to-orange-950/15 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gradient-to-r from-red-900/20 via-orange-900/20 to-yellow-900/20">
                 <p className="text-gray-200 leading-relaxed text-lg md:text-xl text-center">
                   <span className="text-highlight font-bold">7.5+ years</span> of architecting and delivering 
                   <span className="text-accent font-semibold"> enterprise-grade applications</span> across 
@@ -223,19 +223,19 @@ export default function Hero() {
                     title: "Enterprise Leadership", 
                     desc: "Led development teams across TrooTech, Gateway Group, Doyenhub, Agami Tech, and Yanolja Cloud Solutions",
                     icon: "👥",
-                    color: "border-accent/30 bg-accent/5"
+                    color: "border-accent/20 bg-accent/5"
                   },
                   { 
                     title: "System Architecture", 
                     desc: "Designed ERP modules, AI-powered platforms, microservices, and omnichannel customer care systems",
                     icon: "🏗️",
-                    color: "border-highlight/30 bg-highlight/5"
+                    color: "border-highlight/20 bg-highlight/5"
                   },
                   { 
                     title: "Technical Excellence", 
                     desc: "MERN stack expertise, React migration leadership, API consolidation, and real-time dashboard development",
                     icon: "⚡",
-                    color: "border-green-400/30 bg-green-400/5"
+                    color: "border-green-900/30 bg-green-950/10"
                   }
                 ].map((achievement, index) => (
                   <motion.div

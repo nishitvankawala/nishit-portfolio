@@ -157,14 +157,14 @@ Sent from Nishit's Portfolio Contact Form
           <motion.h3 
             className="text-3xl md:text-6xl font-black mb-8 whitespace-nowrap"
             style={{
-              background: "linear-gradient(90deg, #ffffff, #DC2626, #F97316, #EAB308, #16A34A, #ffffff)",
+              background: "linear-gradient(90deg, #e5e7eb, #991B1B, #C2410C, #B45309, #166534, #e5e7eb)",
               backgroundSize: "300% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-            transition={{ duration: 8, repeat: Infinity }}
+            transition={{ duration: 10, repeat: Infinity }}
           >
             Let's Connect
           </motion.h3>
